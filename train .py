@@ -21,7 +21,7 @@ def save_model(model,filename):
 
 def train():
 
-    dataset_path = "D:/examples/python/datasets/mnist"
+    dataset_path = "./datasets/mnist"
     train_data = torchvision.datasets.MNIST(root=dataset_path, train=True, download=True)
     train_data.data = train_data.data.numpy()  # [60000,28,28]
     train_data.targets = train_data.targets.numpy()  # [60000]
@@ -71,7 +71,7 @@ def train():
 def eval():
 
     r = np.load("mnist_cnn.npz")
-    dataset_path = "D:/examples/python/datasets/mnist"
+    dataset_path = "./datasets/mnist"
     test_data = torchvision.datasets.MNIST(root=dataset_path, train=False)
     test_data.data = test_data.data.numpy()  # [60000,28,28]
     test_data.targets = test_data.targets.numpy()  # [60000]
