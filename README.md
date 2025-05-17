@@ -1,1 +1,3 @@
 # MyCNN
+使用numpy实现简单CNN模型
+调用torchvision加载mnist数据集进行训练
